@@ -9,6 +9,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.accesandcontact.AccessAndContactActivity;
@@ -18,6 +19,7 @@ import kamilmilik.przewodnikpogaleriihandlowej.R;
 public class MainActivity extends AppCompatActivity {
    private ImageView cardImage1,cardImage2,cardImage3,imageLogo;
    private TextView cardText1,cardText2,cardText3;
+   private LinearLayout verticalLinear1,verticalLinear2,verticalLinear3,verticalLinear4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setUpWidgets();
 
         imageLogoAction();
+        informationCardAction();
     }
     public void setUpToolbar(){
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
@@ -41,6 +44,12 @@ public class MainActivity extends AppCompatActivity {
         cardText1 = findViewById(R.id.textCardView1);
         cardText2 = findViewById(R.id.textCardView2);
         cardText3 = findViewById(R.id.textCardView3);
+
+        verticalLinear1 = findViewById(R.id.verticalLinear1);
+        verticalLinear2 = findViewById(R.id.verticalLinear2);
+        verticalLinear3 = findViewById(R.id.verticalLinear3);
+        verticalLinear4 = findViewById(R.id.verticalLinear4);
+
         imageLogo = findViewById(R.id.imageLogo);
 
     }
@@ -59,6 +68,15 @@ public class MainActivity extends AppCompatActivity {
     }
     public void imageLogoAction(){
         imageLogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), AccessAndContactActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+    public void informationCardAction(){
+        verticalLinear3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), AccessAndContactActivity.class);

@@ -2,8 +2,10 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     android:orientation="vertical">
     <LinearLayout
+        android:id="@+id/verticalLinear1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -18,7 +20,7 @@
             android:background="@drawable/ic_map" />
 
         <TextView
-            android:id="@+id/text1"
+            android:id="@+id/textContact1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -27,6 +29,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/verticalLinear2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -41,7 +44,7 @@
             android:background="@drawable/ic_casino" />
 
         <TextView
-            android:id="@+id/text2"
+            android:id="@+id/textContact2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -50,11 +53,14 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/verticalLinear3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:gravity="center"
         android:orientation="horizontal"
+        android:clickable="true"
+        android:duplicateParentState="true"
         android:padding="4dp">
 
         <ImageView
@@ -64,7 +70,7 @@
             android:background="@drawable/ic_info_outline" />
 
         <TextView
-            android:id="@+id/text3"
+            android:id="@+id/textContact3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -73,6 +79,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/verticalLinear4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

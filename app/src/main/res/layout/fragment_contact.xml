@@ -1,13 +1,151 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="kamilmilik.przewodnikpogaleriihandlowej.MainView.accesandcontact.ContactFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
+
+        <RelativeLayout
+            android:id="@+id/relativeContact1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <TextView
+            android:id="@+id/textContact1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adres"
+            android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/textContact2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textContact1"
+                android:layout_marginTop="6dp"
+                android:textSize="18dp"
+                android:text="ul. Bobrzynskiego 33" />
+            <TextView
+                android:id="@+id/textContact3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textContact2"
+                android:textSize="18dp"
+                android:text="30-102 Krakow" />
+
+            <TextView
+                android:id="@+id/textContact4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Informacja"
+                android:layout_below="@+id/textContact3"
+                android:layout_marginTop="20dp"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/textContact5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textContact4"
+                android:layout_marginTop="6dp"
+                android:textSize="18dp"
+                android:text="12 123 456 789" />
+            <TextView
+                android:id="@+id/textContact6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textContact5"
+                android:textSize="18dp"
+                android:text="info@galeriaruczaj.pl" />
+            <TextView
+                android:id="@+id/textContact7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dział Marketingu"
+                android:layout_below="@+id/textContact6"
+                android:layout_marginTop="20dp"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/textContact8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textContact7"
+                android:layout_marginTop="6dp"
+                android:textSize="18dp"
+                android:text="12 123 456 987" />
+            <TextView
+                android:id="@+id/textContact9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textContact8"
+                android:textSize="18dp"
+                android:text="marketing@galeriaruczaj.pl" />
+            <TextView
+                android:id="@+id/textContact10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wynajem Pasaży i Lokali"
+                android:layout_below="@+id/textContact9"
+                android:layout_marginTop="20dp"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/textContact11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textContact10"
+                android:layout_marginTop="6dp"
+                android:textSize="18dp"
+                android:text="12 123 123 789" />
+            <TextView
+                android:id="@+id/textContact12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textContact11"
+                android:textSize="18dp"
+                android:text="wynajem@galeriaruczaj.pl" />
+            <TextView
+                android:id="@+id/textContact13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Biuro Parkingu"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/textContact12"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/textContact14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textContact13"
+                android:layout_marginTop="6dp"
+                android:textSize="18dp"
+                android:text="12 123 123 741" />
+            <TextView
+                android:id="@+id/textContact15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textContact14"
+                android:textSize="18dp"
+                android:text="parking@galeriaruczaj.pl" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
 </FrameLayout>

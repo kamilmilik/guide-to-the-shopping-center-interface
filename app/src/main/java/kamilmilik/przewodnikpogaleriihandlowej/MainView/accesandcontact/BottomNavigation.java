@@ -47,20 +47,12 @@ class BottomNavigation  {
                                 android.support.v4.app.FragmentTransaction fragmentTransaction =((FragmentActivity) activity).getSupportFragmentManager().beginTransaction();
                                 fragmentTransaction.replace(R.id.frameLayoutForFragments,accessFragment);
                                 fragmentTransaction.commit();
-//                                        Intent intentAccess = new Intent(activity.getApplicationContext(), AccessAndContactActivity.class);
-//                                        activity.startActivity(intentAccess);
                                 break;
                             case R.id.action_call:
                                 ContactFragment contactFragment = new ContactFragment();
                                 android.support.v4.app.FragmentTransaction fragmentTransaction2 =((FragmentActivity) activity).getSupportFragmentManager().beginTransaction();
                                 fragmentTransaction2.replace(R.id.frameLayoutForFragments,contactFragment);
                                 fragmentTransaction2.commit();
-                                //FragmentManager manager = activity.getFragmentManager();
-                               // manager.beginTransaction().replace(R.id.ac, new Fragment1()).commit();
-
-//                                Intent intentContact = new Intent(context, ContactActivity.class);
-//                                intentContact.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                                context.startActivity(intentContact);
                                 break;
                         }
                         return true;
