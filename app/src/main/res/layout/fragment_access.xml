@@ -1,0 +1,234 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="kamilmilik.przewodnikpogaleriihandlowej.MainView.accesandcontact.AccessFragment">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dojazd"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/text1"
+            android:layout_marginTop="6dp"
+            android:textSize="18dp"
+            android:text="ul. Bobrzynskiego 33" />
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text2"
+            android:textSize="18dp"
+            android:text="30-102 Krakow" />
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/text3"
+            android:layout_marginTop="6dp"
+            android:textSize="18dp"
+            android:text="Przystanek:" />
+
+        <TextView
+            android:id="@+id/text4Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/text4"
+            android:layout_alignBottom="@+id/text4"
+            android:layout_toEndOf="@+id/text4"
+            android:layout_toRightOf="@+id/text4"
+            android:layout_marginLeft="7dp"
+            android:text="Ruczaj"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/text4"
+            android:layout_marginTop="1dp"
+            android:text="Autobusy:"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/text5Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/text5"
+            android:layout_alignBottom="@+id/text5"
+            android:layout_toEndOf="@+id/text5"
+            android:layout_toRightOf="@+id/text5"
+            android:layout_marginLeft="7dp"
+            android:text="194"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/text6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/text5"
+            android:layout_marginTop="1dp"
+            android:text="Tramwaje:"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/text6Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/text6"
+            android:layout_alignBottom="@+id/text6"
+            android:layout_toEndOf="@+id/text6"
+            android:layout_toRightOf="@+id/text6"
+            android:layout_marginLeft="7dp"
+            android:text="11, 18, 23, 52, 72"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/accessLinear1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="7dp"
+            android:layout_below="@id/text6"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/text7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sprawdx rozklad:"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:id="@+id/text7Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="rozklady.mpk.krakow.pl"
+                android:autoLink="web"
+                android:layout_marginLeft="5dp"
+                android:textSize="15dp"
+                android:textColorLink="@color/blackBlue"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="7dp"
+            android:layout_below="@id/accessLinear1"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout">
+
+        <LinearLayout
+            android:id="@+id/accessLinear2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="7dp"
+            android:layout_below="@id/accessLinear1"
+            android:orientation="horizontal" >
+
+
+                />
+
+            <ImageView
+                android:id="@+id/imageAcces1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gal_image_jak_dojade"/>
+            <TextView
+                android:id="@+id/text8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:text="rozklady.mpk.krakow.pl"
+                android:layout_marginLeft="20dp"
+                android:textColorLink="@color/blackBlue"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/accessLinear3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="7dp"
+            android:layout_below="@id/accessLinear2"
+            android:orientation="horizontal" >
+
+
+            />
+
+            <ImageView
+                android:id="@+id/imageAccess2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gal_image_jak_dojade"/>
+            <TextView
+                android:id="@+id/text9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:text="@string/sprawdz_najblizsze_stacje_wavelo"
+                android:layout_marginLeft="20dp"
+                android:textColorLink="@color/blackBlue"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/gal_maps" />
+
+    </RelativeLayout>
+</RelativeLayout>
+</FrameLayout>

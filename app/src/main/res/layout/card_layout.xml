@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="3dp"
+        app:cardPreventCornerOverlap="false"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCardView1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageCardView1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/textCardView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/imageCardView1"
+                android:layout_centerInParent="true"
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Sklepy" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="3dp"
+        app:cardPreventCornerOverlap="false">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCardView2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageCardView2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/textCardView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/imageCardView2"
+                android:layout_centerInParent="true"
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Sklepy" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="3dp"
+        app:cardPreventCornerOverlap="false">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCardView3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageCardView3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/textCardView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/imageCardView2"
+                android:layout_centerInParent="true"
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Sklepy" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
