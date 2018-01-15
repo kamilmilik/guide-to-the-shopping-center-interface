@@ -37,6 +37,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:text="Poziom 1, #121"/>
                     <LinearLayout
                         android:id="@+id/verticalLinear2"
@@ -95,6 +96,7 @@
                     android:id="@+id/salesTextSelectedShop"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:layout_below="@id/linearSelectedShop2"
                     android:layout_centerHorizontal="true"
                     android:text="BIEŻĄCE PROMOCJE"/>
