@@ -3,6 +3,7 @@ package kamilmilik.przewodnikpogaleriihandlowej.MainView;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -14,12 +15,14 @@ import android.widget.TextView;
 
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.accesandcontact.AccessAndContactActivity;
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.login.LoginActivity;
+import kamilmilik.przewodnikpogaleriihandlowej.MainView.shops.ShopsActivity;
 import kamilmilik.przewodnikpogaleriihandlowej.R;
 
 public class MainActivity extends AppCompatActivity {
    private ImageView cardImage1,cardImage2,cardImage3,imageLogo;
    private TextView cardText1,cardText2,cardText3;
    private LinearLayout verticalLinear1,verticalLinear2,verticalLinear3,verticalLinear4;
+   private CardView cardView1,cardView2,cardView3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +35,17 @@ public class MainActivity extends AppCompatActivity {
 
         imageLogoAction();
         informationCardAction();
+        cardView1Action();
     }
     public void setUpToolbar(){
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
     }
     public void findViewByIdAllWidgets(){
+        cardView1 = findViewById(R.id.cardView1);
+        cardView2 = findViewById(R.id.cardView2);
+        cardView3 = findViewById(R.id.cardView3);
+
         cardImage1 = findViewById(R.id.imageCardView1);
         cardImage2 = findViewById(R.id.imageCardView2);
         cardImage3 = findViewById(R.id.imageCardView3);
@@ -80,6 +88,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), AccessAndContactActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+    public void cardView1Action(){
+        cardView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ShopsActivity.class);
                 startActivity(intent);
             }
         });
