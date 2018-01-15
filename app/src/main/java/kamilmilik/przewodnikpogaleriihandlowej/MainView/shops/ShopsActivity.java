@@ -34,7 +34,7 @@ public class ShopsActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         String[] labelsArray1 = {"4f","5asec", "ALDO","Apart","Benneton","Bershka","BIG STAR","C&A","Dr Max","H&M"};
-        String[] labelsArray2 = {"Poziom1, #121","Poziom1, #121","Poziom1, #121","Poziom1, #121","Poziom1, #121","Poziom1, #121","Poziom1, #121","Poziom1, #121","Poziom1, #121","Poziom1, #121"};
+        String[] labelsArray2 = {"Poziom1, #121","Poziom1, #1234","Poziom1, #123425","Poziom1, #1765","Poziom1, #354","Poziom1, #12341","Poziom1, #1221","Poziom1, #1261","Poziom1, #1218","Poziom1, #1921"};
         int[] imagesArray = {R.drawable.ic_map, R.drawable.ic_map,R.drawable.ic_map,R.drawable.ic_map,R.drawable.ic_map,R.drawable.ic_map,R.drawable.ic_map,R.drawable.ic_map,R.drawable.ic_map,R.drawable.ic_map};
         mAdapter = new MyAdapter(labelsArray1,labelsArray2,imagesArray);
         mRecyclerView.setAdapter(mAdapter);
@@ -69,18 +69,20 @@ public class ShopsActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(MyAdapter.ViewHolder holder, int position) {
             setUpCardViewElements(holder,position);
-            clickToCardAction(holder);
+            clickToCardAction(holder,position);
         }
         public void setUpCardViewElements(ViewHolder holder, int position){
             holder.image.setBackgroundResource(imagesArray[position]);
             holder.text1.setText(labelTextArray1[position]);
             holder.text2.setText(labelTextArray2[position]);
         }
-        private void clickToCardAction(final ViewHolder holder) {
+        private void clickToCardAction(final ViewHolder holder, final int position) {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getApplicationContext(),SelectedShopActivity.class);
+                    intent.putExtra(Identifiers.SHOP_NAME_KEY, labelTextArray1[position]);
+                    intent.putExtra(Identifiers.SHOP_LEVEL_KEY, labelTextArray2[position]);
                     startActivity(intent);
                 }
             });

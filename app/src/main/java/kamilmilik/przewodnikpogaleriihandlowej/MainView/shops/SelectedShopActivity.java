@@ -16,7 +16,7 @@ import kamilmilik.przewodnikpogaleriihandlowej.R;
 public class SelectedShopActivity extends AppCompatActivity {
     private static final String TAG = "SelectedShopActivity";
 private Button showMoreButton;
-private TextView selectedShopDescribeText;
+private TextView selectedShopDescribeText,selectedShopLevelText;
        private boolean expandable = true;
         private boolean expand = false;
     @Override
@@ -27,7 +27,15 @@ private TextView selectedShopDescribeText;
 
         showMoreButton = findViewById(R.id.btShowmoreSelectedShopDescribe);
         selectedShopDescribeText = findViewById(R.id.describeShopText);
+        selectedShopLevelText = findViewById(R.id.selectedShopLevel);
 
+        String selectedShop = getIntent().getStringExtra(Identifiers.SHOP_NAME_KEY);
+        String selectedShopLevel = getIntent().getStringExtra(Identifiers.SHOP_LEVEL_KEY);
+        selectedShopLevelText.setText(selectedShopLevel);
+        selectedShopDescribeText.setText(selectedShop + " " +selectedShop + " " +selectedShop + " " +selectedShop + " " +selectedShop + " " + "Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy Dummy dummy ");
+        showMoreOrLessTextAction();
+    }
+    public void showMoreOrLessTextAction(){
         selectedShopDescribeText.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
@@ -37,7 +45,6 @@ private TextView selectedShopDescribeText;
                         showMoreButton.setVisibility(View.VISIBLE);
                         ObjectAnimator animation = ObjectAnimator.ofInt(selectedShopDescribeText, "maxLines", 4);
                         animation.setDuration(0).start();
-                        //showMoreButton.setVisibility(View.GONE);
                     }
                 }
             }
