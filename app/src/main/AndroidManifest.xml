@@ -30,16 +30,23 @@
             android:name=".MainView.shops.ShopsActivity"
             android:label="Sklepy"
             android:parentActivityName=".MainView.MainActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".MainView.shops.SelectedShopActivity"
             android:label="Sklep"
             android:parentActivityName=".MainView.shops.ShopsActivity"
-            android:theme="@style/AppTheme"></activity>
-        <activity android:name=".MainView.parking.ParkingActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MainView.parking.ParkingActivity"
             android:label="Parking"
             android:parentActivityName=".MainView.MainActivity"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".MainView.cinema.CinemaActivity"
+            android:label="Kino"
+            android:parentActivityName=".MainView.MainActivity"
+            android:theme="@style/AppTheme"
+            >
+
         </activity>
     </application>
 

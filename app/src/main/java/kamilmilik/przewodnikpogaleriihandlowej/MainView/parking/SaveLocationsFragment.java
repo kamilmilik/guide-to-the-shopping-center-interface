@@ -85,6 +85,7 @@ public class SaveLocationsFragment extends Fragment {
                     sharedPreferencesOperationForSaveLocations.saveToSharedPreferences(savedDataObject.getLevel(), savedDataObject);
                     savedLocationsList = sharedPreferencesOperationForSaveLocations.getAllItemsSavedFilter();
                     mAdapter.notifyDataSetChanged();
+                    editText.setText("");
                 }
             }
         });

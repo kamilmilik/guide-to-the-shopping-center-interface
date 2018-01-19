@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.accesandcontact.AccessAndContactActivity;
+import kamilmilik.przewodnikpogaleriihandlowej.MainView.cinema.CinemaActivity;
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.login.LoginActivity;
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.parking.ParkingActivity;
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.shops.ShopsActivity;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         informationCardAction();
         cardView1Action();
         cardView2Action();
+        cardView3Action();
     }
     public void setUpToolbar(){
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
@@ -108,6 +110,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ParkingActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+    public void cardView3Action(){
+        cardView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CinemaActivity.class);
                 startActivity(intent);
             }
         });

@@ -1,6 +1,5 @@
-package kamilmilik.przewodnikpogaleriihandlowej.MainView.parking;
+package kamilmilik.przewodnikpogaleriihandlowej.MainView.cinema;
 
-import android.app.Activity;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -9,24 +8,19 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Toast;
 
-import kamilmilik.przewodnikpogaleriihandlowej.MainView.shops.Identifiers;
+import kamilmilik.przewodnikpogaleriihandlowej.MainView.parking.ParkingActivity;
+import kamilmilik.przewodnikpogaleriihandlowej.MainView.parking.ParkingSlideFragment;
+import kamilmilik.przewodnikpogaleriihandlowej.MainView.parking.SaveLocationsFragment;
 import kamilmilik.przewodnikpogaleriihandlowej.R;
 
-public class ParkingActivity extends AppCompatActivity {
-    private static final String TAG = "ParkingActivity";
-    private  Activity activity = this;
+public class CinemaActivity extends AppCompatActivity {
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
-    private  ParkingSlideFragment parkingSlideFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_parking);
+        setContentView(R.layout.activity_cinema);
 
         setUpToolbar();
 
@@ -58,12 +52,14 @@ public class ParkingActivity extends AppCompatActivity {
             // getItem is called to instantiate the fragment for the given page.
             switch (position){
                 case 0:
-                    parkingSlideFragment = new ParkingSlideFragment();
-                    return parkingSlideFragment;
+                    TodayFilmsFragment todayFilmsFragment = new TodayFilmsFragment();
+                    return todayFilmsFragment;
                 case 1:
-                    SaveLocationsFragment saveLocationsFragment = new SaveLocationsFragment();
-                    saveLocationsFragment.setParkingSlideFragment(parkingSlideFragment);
-                    return saveLocationsFragment;
+                    TomorrowFilmsFragment tomorrowFilmsFragment = new TomorrowFilmsFragment();
+                    return tomorrowFilmsFragment;
+                case 2:
+                    AnotherDateFilmsFragment anotherDateFilmsFragment = new AnotherDateFilmsFragment();
+                    return anotherDateFilmsFragment;
                 default:
                     return null;
             }
@@ -73,7 +69,7 @@ public class ParkingActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 2;
+            return 3;
         }
         @Override
         public CharSequence getPageTitle(int position) {
@@ -82,6 +78,8 @@ public class ParkingActivity extends AppCompatActivity {
                     return "FIRST";
                 case 1:
                     return "SECOND";
+                case 2:
+                    return "THIRD";
             }
             return  null;
         }
