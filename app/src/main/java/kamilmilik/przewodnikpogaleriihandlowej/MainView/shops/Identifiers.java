@@ -9,5 +9,4 @@ public class Identifiers {
     public static final String SHOP_LEVEL_KEY = "shopLevel";
     public static final String SHOP_IMAGE_KEY = "shopImage";
     public static final String SHARED_PREFERENCES_SAVED_LOCATIONS_KEY = "savedLocations";
-    public static final String SHARED_PREFERENCES_SAVED_LOCATIONS_FOR_PARKING_FRAGMENT_KEY = "savedLocationsPaking";
 }
