@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.accesandcontact.AccessAndContactActivity;
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.login.LoginActivity;
+import kamilmilik.przewodnikpogaleriihandlowej.MainView.parking.ParkingActivity;
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.shops.ShopsActivity;
 import kamilmilik.przewodnikpogaleriihandlowej.R;
 
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         imageLogoAction();
         informationCardAction();
         cardView1Action();
+        cardView2Action();
     }
     public void setUpToolbar(){
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
@@ -66,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void setUpCardHorizontalWidgets(){
         String[] labelsArray = {"Sklepy","Parking", "Kino"};
-        int[] imagesArray = {R.drawable.gal, R.drawable.gal2,R.drawable.gal1};
+        int[] imagesArray = {R.drawable.gift_brown_shopping_market, R.drawable.pexels_photo,R.drawable.popcorn_movie};
         cardImage1.setBackgroundResource(imagesArray[0]);
         cardImage2.setBackgroundResource(imagesArray[1]);
         cardImage3.setBackgroundResource(imagesArray[2]);
@@ -97,6 +99,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ShopsActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+    public void cardView2Action(){
+        cardView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ParkingActivity.class);
                 startActivity(intent);
             }
         });

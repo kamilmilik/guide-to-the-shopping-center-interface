@@ -25,7 +25,8 @@
                     android:id="@+id/imageLogoSelectedShop"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/gal"/>
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/aldo"/>
                 <LinearLayout
                     android:id="@+id/linearSelectedShop1"
                     android:layout_width="match_parent"
@@ -102,6 +103,7 @@
                     android:layout_centerHorizontal="true"
                     android:text="BIEŻĄCE PROMOCJE"/>
                 <ImageView
+                    android:id="@+id/promotionImage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/salesTextSelectedShop"

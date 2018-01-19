@@ -33,9 +33,9 @@ public class ShopsActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        String[] labelsArray1 = {"4f","5asec", "ALDO","Apart","Benneton","Bershka","BIG STAR","C&A","Dr Max","H&M"};
+        String[] labelsArray1 = {"four4f","five5asec", "ALDO","Apart","Benneton","Bershka","BIG STAR","C&A","Dr Max","Online"};
         String[] labelsArray2 = {"Poziom1, #121","Poziom1, #1234","Poziom1, #123425","Poziom1, #1765","Poziom1, #354","Poziom1, #12341","Poziom1, #1221","Poziom1, #1261","Poziom1, #1218","Poziom1, #1921"};
-        int[] imagesArray = {R.drawable.ic_map, R.drawable.ic_map,R.drawable.ic_map,R.drawable.ic_map,R.drawable.ic_map,R.drawable.ic_map,R.drawable.ic_map,R.drawable.ic_map,R.drawable.ic_map,R.drawable.ic_map};
+        int[] imagesArray = {R.drawable.four4f, R.drawable.five5asec,R.drawable.aldo,R.drawable.apart,R.drawable.benneton,R.drawable.bershka,R.drawable.bigstar,R.drawable.ca,R.drawable.a1635,R.drawable.online};
         mAdapter = new MyAdapter(labelsArray1,labelsArray2,imagesArray);
         mRecyclerView.setAdapter(mAdapter);
 
@@ -81,6 +81,7 @@ public class ShopsActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getApplicationContext(),SelectedShopActivity.class);
+                    intent.putExtra(Identifiers.SHOP_IMAGE_KEY, imagesArray[position]);
                     intent.putExtra(Identifiers.SHOP_NAME_KEY, labelTextArray1[position]);
                     intent.putExtra(Identifiers.SHOP_LEVEL_KEY, labelTextArray2[position]);
                     startActivity(intent);

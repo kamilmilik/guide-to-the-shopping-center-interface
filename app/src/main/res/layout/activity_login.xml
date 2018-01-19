@@ -9,12 +9,12 @@
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/blackBlue"
-        app:titleTextColor="#FFFFFF"
-        android:elevation="0dp"
-        app:theme="@style/ToolbarColoredBackArrow"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/black"
+        android:elevation="4dp"
+        app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-
+<!-- czarna strzalka wstecz tak sie robi   app:theme="@style/ToolbarColoredBackArrow" -->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -29,14 +29,16 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/ic_launcher" />
+            android:background="@drawable/logo" />
 
         <Button
             android:id="@+id/loginWithFacebookButton"
@@ -46,7 +48,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="22dp"
             android:background="#3C517E"
-            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:drawableLeft="@drawable/ic_facebook_logo"
             android:padding="16dp"
             android:text="Kontynuuj z facebook"
             android:textColor="#ffffff"
@@ -77,6 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:ems="10"
             android:hint="Email"
@@ -123,7 +126,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="30dp"
             android:orientation="vertical">
 
             <TextView
@@ -138,7 +141,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:gravity="center"
-                android:text="ZAREJESTRUJ SIĘ?"
+                android:text="ZAREJESTRUJ SIĘ"
                 android:textColor="#0F6B88"
                 android:textSize="15dp" />
 
