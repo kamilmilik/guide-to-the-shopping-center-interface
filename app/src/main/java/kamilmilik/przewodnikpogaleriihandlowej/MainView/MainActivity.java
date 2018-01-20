@@ -158,25 +158,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    //menu
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-        return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
-            case R.id.accountMenu:
-                Intent intent = new Intent(this, LoginActivity.class);
-                startActivity(intent);
-                return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
+//    //menu
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        MenuInflater inflater = getMenuInflater();
+//        inflater.inflate(R.menu.menu, menu);
+//        return true;
+//    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//
+//        switch (item.getItemId()) {
+//            case R.id.accountMenu:
+//                Intent intent = new Intent(this, LoginActivity.class);
+//                startActivity(intent);
+//                return true;
+//        }
+//
+//        return super.onOptionsItemSelected(item);
+//    }
 
 
 

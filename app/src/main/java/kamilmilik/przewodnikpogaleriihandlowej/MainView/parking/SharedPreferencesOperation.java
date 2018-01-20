@@ -5,10 +5,13 @@ import android.content.SharedPreferences;
 import android.util.Log;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
+import kamilmilik.przewodnikpogaleriihandlowej.MainView.login.UserDataObject;
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.shops.Identifiers;
 
 import static android.content.Context.MODE_PRIVATE;
@@ -61,6 +64,19 @@ public class SharedPreferencesOperation {
         }
         return mapOfObj;
     }
+    public ArrayList<UserDataObject> getAllItemsLogin(){
+        Gson gson = new Gson();
+        ArrayList<UserDataObject> mapOfObj = new ArrayList<>();
+        Map<String, ?> allEntries = sharedPreferences.getAll();
+        for (Map.Entry<String, ?> entry : allEntries.entrySet()) {
+            if(entry.getValue() != null){
+                UserDataObject obj = gson.fromJson(entry.getValue().toString(), UserDataObject.class);
+                //Log.d("map values", entry.getKey() + ": " + obj.getCurrentDateTimeString() + " "+ obj.getLevel());
+                mapOfObj.add(obj);
+            }
+        }
+        return mapOfObj;
+    }
 //    public void putInt( int value){
 //        SharedPreferences.Editor editor = sharedPreferences.edit();
 //        editor.putInt(Identifiers.SHARED_PREFERENCES_SAVED_LOCATIONS_FOR_PARKING_FRAGMENT_KEY, value);
@@ -71,4 +87,5 @@ public class SharedPreferencesOperation {
 //        int data = sharedPreferences.getInt(key, -1);
 //        return  data;
 //    }
+
 }
