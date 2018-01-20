@@ -1,0 +1,60 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FCFCFC"
+        tools:context="kamilmilik.flatsearch.showresultactivity.SlideTabsActivity">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="1dp"
+            android:layout_margin="5dp"
+            app:cardPreventCornerOverlap="false">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/imagesShopEvent"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop" />
+
+
+                <TextView
+                    android:id="@+id/titleShopEvent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/imagesShopEvent"
+                    android:layout_toRightOf="@+id/imagesShopEvent"
+                    android:text="W HM WŁAŚNIE RUSZYŁA ZIMOWA PROMOCJA"
+                    android:textAlignment="gravity"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

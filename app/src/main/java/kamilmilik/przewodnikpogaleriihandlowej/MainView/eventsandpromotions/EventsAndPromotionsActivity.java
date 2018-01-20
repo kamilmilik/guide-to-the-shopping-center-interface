@@ -1,4 +1,4 @@
-package kamilmilik.przewodnikpogaleriihandlowej.MainView.shops;
+package kamilmilik.przewodnikpogaleriihandlowej.MainView.eventsandpromotions;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -12,20 +12,20 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import kamilmilik.przewodnikpogaleriihandlowej.MainView.shops.Identifiers;
+import kamilmilik.przewodnikpogaleriihandlowej.MainView.shops.SelectedShopActivity;
 import kamilmilik.przewodnikpogaleriihandlowej.R;
 
-public class ShopsActivity extends AppCompatActivity {
+public class EventsAndPromotionsActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shops);
+        setContentView(R.layout.activity_events_and_promotions);
 
         setUpToolbar();
-
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 
         mRecyclerView.setHasFixedSize(true);
@@ -33,12 +33,11 @@ public class ShopsActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        String[] labelsArray1 = {"4f","five5asec", "ALDO","Apart","Benneton","Bershka","BIG STAR","C&A","Dr Max","Online"};
-        String[] labelsArray2 = {"0, #121","1, #1234","-1, #123425","1, #1765","1, #354","1, #12341","1, #1221","1, #1261","1, #1218","1, #1921"};
-        int[] imagesArray = {R.drawable.four4f, R.drawable.five5asec,R.drawable.aldo,R.drawable.apart,R.drawable.benneton,R.drawable.bershka,R.drawable.bigstar,R.drawable.ca,R.drawable.a1635,R.drawable.online};
+        String[] labelsArray1 = {"W 4F WŁAŚNIE RUSZYŁA ZIMOWA PROMOCJA","WYPRZEDAŻ W SKLEPIE ALDO","ZIMOWA WYPRZEDAŻ -50% NA WSZYSTKO!"};
+        String[] labelsArray2 = {"0, #121","1, #1765","1, #354","1, #12341"};
+        int[] imagesArray = {R.drawable.four4f,R.drawable.aldo,R.drawable.apart};
         mAdapter = new MyAdapter(labelsArray1,labelsArray2,imagesArray);
         mRecyclerView.setAdapter(mAdapter);
-
     }
     public void setUpToolbar(){
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
@@ -46,8 +45,6 @@ public class ShopsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
-
-
     public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         private String[] labelTextArray1;
         private String[] labelTextArray2;
@@ -61,7 +58,7 @@ public class ShopsActivity extends AppCompatActivity {
 
         @Override
         public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.shops_card_view,parent,false);
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_view_promotions_and_events,parent,false);
             ViewHolder viewHolder = new ViewHolder(view);
             return viewHolder;
         }
@@ -74,7 +71,6 @@ public class ShopsActivity extends AppCompatActivity {
         public void setUpCardViewElements(ViewHolder holder, int position){
             holder.image.setBackgroundResource(imagesArray[position]);
             holder.text1.setText(labelTextArray1[position]);
-            holder.text2.setText("Poziom" + labelTextArray2[position]);
         }
         private void clickToCardAction(final ViewHolder holder, final int position) {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -93,17 +89,15 @@ public class ShopsActivity extends AppCompatActivity {
             return imagesArray.length;
         }
         public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView text1,text2;
-        private ImageView image;
+            private TextView text1;
+            private ImageView image;
             public ViewHolder(View itemView) {
                 super(itemView);
-                text1 = itemView.findViewById(R.id.textShopsCardView1);
-                text2 = itemView.findViewById(R.id.textShopsCardView2);
-                image = itemView.findViewById(R.id.imageShopsCardView1);
+                text1 = itemView.findViewById(R.id.titleShopEvent);
+                image = itemView.findViewById(R.id.imagesShopEvent);
 
             }
 
         }
     }
-
 }

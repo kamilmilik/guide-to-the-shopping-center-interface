@@ -25,7 +25,7 @@
 
 
            <Button
-               android:id="@+id/btn1Parking"
+               android:id="@+id/btn1GalleryPlan"
                android:layout_width="fill_parent"
                android:layout_height="40dip"
                android:layout_margin="0dip"
@@ -34,7 +34,7 @@
                android:text="0" />
 
            <Button
-               android:id="@+id/btn2Parking"
+               android:id="@+id/btn2GalleryPlan"
                android:layout_width="fill_parent"
                android:layout_height="40dip"
                android:layout_margin="0dip"

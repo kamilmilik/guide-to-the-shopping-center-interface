@@ -2,8 +2,10 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintGalleryPlan"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/poziom0"
     tools:context="kamilmilik.przewodnikpogaleriihandlowej.MainView.galleryplan.GalleryPlanActivity">
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -14,4 +16,47 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:titleTextColor="@color/black" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <Button
+            android:id="@+id/btn1GalleryPlan"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_margin="0dip"
+            android:textColor="@color/darkPink"
+            android:background="@color/grey"
+            android:text="-1" />
+
+        <Button
+            android:id="@+id/btn2GalleryPlan"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_margin="0dip"
+            android:padding="0dip"
+            android:background="@color/colorPrimary"
+            android:text="0"/>
+        <Button
+            android:id="@+id/btn3GalleryPlan"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_margin="0dip"
+            android:padding="0dip"
+            android:background="@color/colorPrimary"
+            android:text="+1"
+
+            />
+
+
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

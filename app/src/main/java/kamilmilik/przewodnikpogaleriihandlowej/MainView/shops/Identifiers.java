@@ -12,4 +12,5 @@ public class Identifiers {
     public static final String FILM_NAME_KEY = "filmName";
     public static final String FILM_TEXT_LEVEL_KEY = "textLevel";
     public static final String FILM_IMAGE_KEY = "filmImage";
+    public static final String LEVEL_FROM_SELECTED_SHOP_TO_GALLERY_PLAN_KEY = "selectedToGallery";
 }

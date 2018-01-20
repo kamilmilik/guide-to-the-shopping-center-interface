@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
-import kamilmilik.przewodnikpogaleriihandlowej.MainView.shops.Identifiers;
 import kamilmilik.przewodnikpogaleriihandlowej.R;
 
 /**
@@ -49,8 +48,8 @@ public class ParkingSlideFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        button1 = view.findViewById(R.id.btn1Parking);
-        button2 = view.findViewById(R.id.btn2Parking);
+        button1 = view.findViewById(R.id.btn1GalleryPlan);
+        button2 = view.findViewById(R.id.btn2GalleryPlan);
         frameParking = view.findViewById(R.id.frameParking);
         oldColors =  button2.getTextColors();//get default text color in button
 

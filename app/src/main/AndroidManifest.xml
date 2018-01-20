@@ -58,10 +58,21 @@
             android:theme="@style/AppTheme">
             >
         </activity>
-        <activity android:name=".MainView.galleryplan.GalleryPlanActivity"
+        <activity
+            android:name=".MainView.galleryplan.GalleryPlanActivity"
             android:label="Plan Galerii"
             android:parentActivityName=".MainView.MainActivity"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MainView.eventsandpromotions.EventsAndPromotionsActivity"
+            android:label="Wydarzenia i promocje"
+            android:parentActivityName=".MainView.MainActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".MainView.settings.SettingsActivity"
+            android:label="Ustawienia"
+            android:parentActivityName=".MainView.MainActivity"
+            android:theme="@style/AppTheme"
+            >
 
         </activity>
     </application>

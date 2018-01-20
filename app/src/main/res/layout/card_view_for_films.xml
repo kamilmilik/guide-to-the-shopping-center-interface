@@ -29,22 +29,22 @@
 
 
                 <ImageView
-                    android:id="@+id/imagesCinema"
+                    android:id="@+id/imagesShopEvent"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                    android:scaleType="centerCrop" />
 
 
                 <TextView
-                    android:id="@+id/titleCinema"
+                    android:id="@+id/titleShopEvent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
-                    android:layout_below="@id/titleCinema"
-                    android:layout_toEndOf="@+id/imagesCinema"
-                    android:layout_toRightOf="@+id/imagesCinema"
+                    android:layout_below="@id/titleShopEvent"
+                    android:layout_toEndOf="@+id/imagesShopEvent"
+                    android:layout_toRightOf="@+id/imagesShopEvent"
                     android:text="Nazwa filmu"
                     android:textAlignment="gravity"
                     android:textSize="20dp"
@@ -53,11 +53,11 @@
                     android:id="@+id/textUnderTitleCinema"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/titleCinema"
-                    android:layout_below="@id/titleCinema"
+                    android:layout_alignStart="@+id/titleShopEvent"
+                    android:layout_below="@id/titleShopEvent"
                     android:text="500zł"
                     android:textSize="18dp"
-                    android:layout_alignLeft="@+id/titleCinema" />
+                    android:layout_alignLeft="@+id/titleShopEvent" />
                 <TextView
                     android:id="@+id/date1"
                     android:layout_width="wrap_content"

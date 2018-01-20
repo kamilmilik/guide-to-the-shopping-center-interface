@@ -15,6 +15,8 @@ import android.widget.TextView;
 
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.accesandcontact.AccessAndContactActivity;
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.cinema.CinemaActivity;
+import kamilmilik.przewodnikpogaleriihandlowej.MainView.eventsandpromotions.EventsAndPromotionsActivity;
+import kamilmilik.przewodnikpogaleriihandlowej.MainView.galleryplan.GalleryPlanActivity;
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.login.LoginActivity;
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.parking.ParkingActivity;
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.shops.ShopsActivity;
@@ -37,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
 
         imageLogoAction();
         informationCardAction();
+        galleryPlanAction();
+        eventsAndPromotionsAction();
+
         cardView1Action();
         cardView2Action();
         cardView3Action();
@@ -119,6 +124,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), CinemaActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+    public void galleryPlanAction(){
+        verticalLinear2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), EventsAndPromotionsActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+    public void eventsAndPromotionsAction(){
+        verticalLinear1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), GalleryPlanActivity.class);
                 startActivity(intent);
             }
         });

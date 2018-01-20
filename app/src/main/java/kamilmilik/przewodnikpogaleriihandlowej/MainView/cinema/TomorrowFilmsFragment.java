@@ -14,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.shops.Identifiers;
-import kamilmilik.przewodnikpogaleriihandlowej.MainView.shops.SelectedShopActivity;
 import kamilmilik.przewodnikpogaleriihandlowej.R;
 
 /**
@@ -102,9 +101,9 @@ public class TomorrowFilmsFragment extends Fragment {
             private ImageView image;
             public ViewHolder(View itemView) {
                 super(itemView);
-                titleCinema = itemView.findViewById(R.id.titleCinema);
+                titleCinema = itemView.findViewById(R.id.titleShopEvent);
                 textUnderTitleCinema = itemView.findViewById(R.id.textUnderTitleCinema);
-                image = itemView.findViewById(R.id.imagesCinema);
+                image = itemView.findViewById(R.id.imagesShopEvent);
 
             }
 
