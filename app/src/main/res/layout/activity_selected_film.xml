@@ -183,6 +183,7 @@
 
 
                     <Button
+                        android:id="@+id/chooseDateSelectedFilmButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/text4"
@@ -195,7 +196,7 @@
                         android:textAlignment="gravity" />
 
                     <TextView
-                        android:id="@+id/choosenDate"
+                        android:id="@+id/chooseDateText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -237,7 +238,7 @@
                             android:layout_marginTop="15dp"
                             android:layout_toEndOf="@+id/date1"
                             android:layout_toRightOf="@+id/date1"
-                            android:text="10:25" />
+                            android:text="13:25" />
 
                         <TextView
                             android:id="@+id/date3"
@@ -247,7 +248,7 @@
                             android:layout_marginTop="15dp"
                             android:layout_toEndOf="@+id/date2"
                             android:layout_toRightOf="@+id/date2"
-                            android:text="10:25" />
+                            android:text="14:25" />
 
                         <TextView
                             android:id="@+id/date4"
@@ -257,7 +258,7 @@
                             android:layout_marginTop="15dp"
                             android:layout_toEndOf="@+id/date3"
                             android:layout_toRightOf="@+id/date3"
-                            android:text="10:25" />
+                            android:text="16:00" />
 
                         <TextView
                             android:id="@+id/date5"
@@ -267,7 +268,7 @@
                             android:layout_marginTop="15dp"
                             android:layout_toEndOf="@+id/date4"
                             android:layout_toRightOf="@+id/date4"
-                            android:text="10:25" />
+                            android:text="19:20" />
                     </RelativeLayout>
 
                     <Button

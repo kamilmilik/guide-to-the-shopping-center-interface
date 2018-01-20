@@ -45,12 +45,23 @@
             android:name=".MainView.cinema.CinemaActivity"
             android:label="Kino"
             android:parentActivityName=".MainView.MainActivity"
-            android:theme="@style/AppTheme"></activity>
-        <activity android:name=".MainView.cinema.SelectedFilmActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MainView.cinema.SelectedFilmActivity"
             android:label="Film"
             android:parentActivityName=".MainView.cinema.CinemaActivity"
-            android:theme="@style/AppTheme"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MainView.cinema.BuyTicketActivity"
+            android:label="Kup Bilet"
+            android:parentActivityName=".MainView.cinema.CinemaActivity"
+            android:theme="@style/AppTheme">
             >
+        </activity>
+        <activity android:name=".MainView.galleryplan.GalleryPlanActivity"
+            android:label="Plan Galerii"
+            android:parentActivityName=".MainView.MainActivity"
+            android:theme="@style/AppTheme">
 
         </activity>
     </application>

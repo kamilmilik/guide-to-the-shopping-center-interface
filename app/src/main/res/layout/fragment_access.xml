@@ -168,9 +168,10 @@
 
             <ImageView
                 android:id="@+id/imageAcces1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/gal_image_jak_dojade"/>
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/jakdojade"/>
             <TextView
                 android:id="@+id/text8"
                 android:layout_width="wrap_content"
@@ -199,9 +200,9 @@
 
             <ImageView
                 android:id="@+id/imageAccess2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/gal_image_jak_dojade"/>
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/wavelo"/>
             <TextView
                 android:id="@+id/text9"
                 android:layout_width="wrap_content"

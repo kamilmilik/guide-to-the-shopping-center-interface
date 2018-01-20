@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:weightSum="4"
     android:background="@color/colorPrimary"
     android:orientation="vertical">
+
     <LinearLayout
+        android:layout_weight="1"
         android:id="@+id/verticalLinear1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,6 +32,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_weight="1"
         android:id="@+id/verticalLinear2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,14 +57,15 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_weight="1"
         android:id="@+id/verticalLinear3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:gravity="center"
-        android:orientation="horizontal"
         android:clickable="true"
         android:duplicateParentState="true"
+        android:gravity="center"
+        android:orientation="horizontal"
         android:padding="4dp">
 
         <ImageView
@@ -79,6 +84,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_weight="1"
         android:id="@+id/verticalLinear4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
