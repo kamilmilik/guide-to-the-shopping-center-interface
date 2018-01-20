@@ -2,6 +2,7 @@ package kamilmilik.przewodnikpogaleriihandlowej.MainView.cinema;
 
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.annotation.Nullable;
@@ -21,6 +22,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
+import kamilmilik.przewodnikpogaleriihandlowej.MainView.shops.Identifiers;
+import kamilmilik.przewodnikpogaleriihandlowej.MainView.shops.SelectedShopActivity;
 import kamilmilik.przewodnikpogaleriihandlowej.R;
 
 /**
@@ -144,7 +147,11 @@ public void setPropertyFilmSetDependToChoosenDate(RecyclerView.Adapter mAdapter)
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    Intent intent = new Intent(getContext(), SelectedFilmActivity.class);
+                    intent.putExtra(Identifiers.FILM_IMAGE_KEY, imagesArray[position]);
+                    intent.putExtra(Identifiers.FILM_NAME_KEY, labelTextArray1[position]);
+                    intent.putExtra(Identifiers.FILM_TEXT_LEVEL_KEY, labelTextArray2[position]);
+                    startActivity(intent);
                 }
             });
         }

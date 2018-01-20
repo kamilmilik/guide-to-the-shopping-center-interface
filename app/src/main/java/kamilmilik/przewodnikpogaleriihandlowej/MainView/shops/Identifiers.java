@@ -9,4 +9,7 @@ public class Identifiers {
     public static final String SHOP_LEVEL_KEY = "shopLevel";
     public static final String SHOP_IMAGE_KEY = "shopImage";
     public static final String SHARED_PREFERENCES_SAVED_LOCATIONS_KEY = "savedLocations";
+    public static final String FILM_NAME_KEY = "filmName";
+    public static final String FILM_TEXT_LEVEL_KEY = "textLevel";
+    public static final String FILM_IMAGE_KEY = "filmImage";
 }

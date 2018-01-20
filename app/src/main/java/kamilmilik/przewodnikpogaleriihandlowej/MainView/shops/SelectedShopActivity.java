@@ -15,11 +15,11 @@ import kamilmilik.przewodnikpogaleriihandlowej.R;
 
 public class SelectedShopActivity extends AppCompatActivity {
     private static final String TAG = "SelectedShopActivity";
-private Button showMoreButton;
-private TextView selectedShopDescribeText,selectedShopLevelText, showInMapText;
-private ImageView promotionImage, imageLogoSelectedShops;
-       private boolean expandable = true;
-        private boolean expand = false;
+    private Button showMoreButton;
+    private TextView selectedShopDescribeText, selectedShopLevelText, showInMapText;
+    private ImageView promotionImage, imageLogoSelectedShops;
+    private boolean expandable = true;
+    private boolean expand = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

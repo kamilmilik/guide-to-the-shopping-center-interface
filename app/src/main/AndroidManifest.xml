@@ -40,10 +40,15 @@
             android:name=".MainView.parking.ParkingActivity"
             android:label="Parking"
             android:parentActivityName=".MainView.MainActivity"
-            android:theme="@style/AppTheme"></activity>
-        <activity android:name=".MainView.cinema.CinemaActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MainView.cinema.CinemaActivity"
             android:label="Kino"
             android:parentActivityName=".MainView.MainActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".MainView.cinema.SelectedFilmActivity"
+            android:label="Film"
+            android:parentActivityName=".MainView.cinema.CinemaActivity"
             android:theme="@style/AppTheme"
             >
 

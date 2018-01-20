@@ -1,6 +1,7 @@
 package kamilmilik.przewodnikpogaleriihandlowej.MainView.cinema;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import kamilmilik.przewodnikpogaleriihandlowej.MainView.shops.Identifiers;
+import kamilmilik.przewodnikpogaleriihandlowej.MainView.shops.SelectedShopActivity;
 import kamilmilik.przewodnikpogaleriihandlowej.R;
 
 /**
@@ -82,7 +85,11 @@ public class TomorrowFilmsFragment extends Fragment {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    Intent intent = new Intent(getContext(), SelectedFilmActivity.class);
+                    intent.putExtra(Identifiers.FILM_IMAGE_KEY, imagesArray[position]);
+                    intent.putExtra(Identifiers.FILM_NAME_KEY, labelTextArray1[position]);
+                    intent.putExtra(Identifiers.FILM_TEXT_LEVEL_KEY, labelTextArray2[position]);
+                    startActivity(intent);
                 }
             });
         }
