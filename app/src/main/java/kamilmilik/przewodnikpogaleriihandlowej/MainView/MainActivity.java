@@ -19,6 +19,7 @@ import kamilmilik.przewodnikpogaleriihandlowej.MainView.eventsandpromotions.Even
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.galleryplan.GalleryPlanActivity;
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.login.LoginActivity;
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.parking.ParkingActivity;
+import kamilmilik.przewodnikpogaleriihandlowej.MainView.settings.SettingsActivity;
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.shops.ShopsActivity;
 import kamilmilik.przewodnikpogaleriihandlowej.R;
 
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         informationCardAction();
         galleryPlanAction();
         eventsAndPromotionsAction();
+        settingsAction();
 
         cardView1Action();
         cardView2Action();
@@ -92,15 +94,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public void informationCardAction(){
-        verticalLinear3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), AccessAndContactActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
     public void cardView1Action(){
         cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -128,6 +121,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void informationCardAction(){
+        verticalLinear3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), AccessAndContactActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
     public void galleryPlanAction(){
         verticalLinear2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -142,6 +145,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), GalleryPlanActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+    public void settingsAction(){
+        verticalLinear4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
                 startActivity(intent);
             }
         });
