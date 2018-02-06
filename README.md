@@ -1,4 +1,4 @@
-![alt text](https://media.giphy.com/media/l4pTgy6YeIJxvLq48/giphy.gif)
-<a href="https://media.giphy.com/media/l4pTgy6YeIJxvLq48/giphy.gif"></a>
+# Gallery App Android
 
-<img src="https://media.giphy.com/media/l4pTgy6YeIJxvLq48/giphy.gif"/>
+
+![](https://giphy.com/gifs/l4pTgy6YeIJxvLq48/html5)
