@@ -1,6 +1,5 @@
 # Shoping Center App Android
 * I implemented a prototype made by Andy Novoseila and Matuesz Dzida. 
-* Many things are simulate.
 * Link to prototype: [prototype](https://projects.invisionapp.com/share/CFF0TVER3#/screens/269975726)
 
 
