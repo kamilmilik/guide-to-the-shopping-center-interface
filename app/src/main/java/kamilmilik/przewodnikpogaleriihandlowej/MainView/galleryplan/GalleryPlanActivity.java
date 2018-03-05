@@ -5,10 +5,16 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.github.chrisbanes.photoview.PhotoView;
+
+import java.util.Random;
+
+import kamilmilik.przewodnikpogaleriihandlowej.MainView.parking.ScaleHelper;
 import kamilmilik.przewodnikpogaleriihandlowej.MainView.shops.Identifiers;
 import kamilmilik.przewodnikpogaleriihandlowej.R;
 
@@ -16,7 +22,8 @@ public class GalleryPlanActivity extends AppCompatActivity {
     private static final String TAG = "GalleryPlanActivity";
     private Button buttonLevel1, buttonLevel2, buttonLevel3;
     private ColorStateList oldColors;
-    private ConstraintLayout constraintLayout;
+    //private ConstraintLayout constraintLayout;
+    private PhotoView photoView ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +32,10 @@ public class GalleryPlanActivity extends AppCompatActivity {
         buttonLevel1 = findViewById(R.id.btn1GalleryPlan);
         buttonLevel2 = findViewById(R.id.btn2GalleryPlan);
         buttonLevel3 = findViewById(R.id.btn3GalleryPlan);
-        constraintLayout = findViewById(R.id.constraintGalleryPlan);
+        photoView = (PhotoView) findViewById(R.id.photo_view_gallery_plan);
+        setScaleToPhoto(photoView);
+        photoView.setImageResource(R.drawable.plan_parkingu);
+        //constraintLayout = findViewById(R.id.constraintGalleryPlan);
 
         oldColors =  buttonLevel2.getTextColors();//get default text color in button
         setUpToolbar();
@@ -85,7 +95,9 @@ public class GalleryPlanActivity extends AppCompatActivity {
         buttonLevel2.setTextColor(oldColors);
         buttonLevel3.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         buttonLevel3.setTextColor(oldColors);
-        constraintLayout.setBackground(getResources().getDrawable(R.drawable.plan_parkingu));
+        setScaleToPhoto(photoView);
+        photoView.setImageResource(R.drawable.plan_parkingu);
+        //constraintLayout.setBackground(getResources().getDrawable(R.drawable.plan_parkingu));
     }
     public void clickedButton2(){
         buttonLevel2.setBackgroundColor(getResources().getColor(R.color.grey));
@@ -94,7 +106,9 @@ public class GalleryPlanActivity extends AppCompatActivity {
         buttonLevel1.setTextColor(oldColors);
         buttonLevel3.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         buttonLevel3.setTextColor(oldColors);
-        constraintLayout.setBackground(getResources().getDrawable(R.drawable.poziom0));
+        setScaleToPhoto(photoView);
+        photoView.setImageResource(R.drawable.poziom0);
+        //constraintLayout.setBackground(getResources().getDrawable(R.drawable.poziom0));
     }
     public void clickedButton3(){
         buttonLevel3.setBackgroundColor(getResources().getColor(R.color.grey));
@@ -103,6 +117,15 @@ public class GalleryPlanActivity extends AppCompatActivity {
         buttonLevel1.setTextColor(oldColors);
         buttonLevel2.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         buttonLevel2.setTextColor(oldColors);
-        constraintLayout.setBackground(getResources().getDrawable(R.drawable.plan_parkingu2));
+
+        setScaleToPhoto(photoView);
+        photoView.setImageResource(R.drawable.plan_parkingu2);
+        //constraintLayout.setBackground(getResources().getDrawable(R.drawable.plan_parkingu2));
+    }
+    private void setScaleToPhoto(PhotoView photoView){
+        float randomScale = ScaleHelper.createRandomScale(photoView);
+        int centerX=ScaleHelper.createXScale(this);
+        int centerY =ScaleHelper.createYScale(this);
+        photoView.setScale(randomScale, centerX, centerY, true);
     }
 }

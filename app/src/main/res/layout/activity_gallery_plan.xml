@@ -6,6 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="kamilmilik.przewodnikpogaleriihandlowej.MainView.galleryplan.GalleryPlanActivity">
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/photo_view_gallery_plan"
+        android:layout_width="match_parent"
+        android:scaleType="fitCenter"
+        android:layout_height="match_parent"/>
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"

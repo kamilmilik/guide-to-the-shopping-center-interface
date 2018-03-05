@@ -4,9 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/frameParking"
-    android:background="@drawable/plan_parkingu"
-    tools:context="kamilmilik.przewodnikpogaleriihandlowej.MainView.parking.ParkingSlideFragment">
+    android:background="@null"
 
+    tools:context="kamilmilik.przewodnikpogaleriihandlowej.MainView.parking.ParkingSlideFragment">
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/photo_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
    <android.support.constraint.ConstraintLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent">

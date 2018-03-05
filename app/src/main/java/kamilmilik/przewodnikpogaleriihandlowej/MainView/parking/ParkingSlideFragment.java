@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
+import com.github.chrisbanes.photoview.PhotoView;
+
 import kamilmilik.przewodnikpogaleriihandlowej.R;
 
 /**
@@ -22,6 +24,7 @@ public class ParkingSlideFragment extends Fragment {
     private ColorStateList oldColors;
     private Button button1,button2;
     private FrameLayout frameParking;
+    private PhotoView photoView;
 
     public ParkingSlideFragment() {
         // Required empty public constructor
@@ -48,9 +51,13 @@ public class ParkingSlideFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        photoView = (PhotoView) view.findViewById(R.id.photo_view);
+        setScaleToPhoto(photoView);
+        photoView.setImageResource(R.drawable.plan_parkingu);
+
         button1 = view.findViewById(R.id.btn1GalleryPlan);
         button2 = view.findViewById(R.id.btn2GalleryPlan);
-        frameParking = view.findViewById(R.id.frameParking);
+        //frameParking = view.findViewById(R.id.frameParking);
         oldColors =  button2.getTextColors();//get default text color in button
 
         button1Action();
@@ -69,14 +76,21 @@ public class ParkingSlideFragment extends Fragment {
                 button1.setTextColor(getResources().getColor(R.color.darkPink));
                 button2.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 button2.setTextColor(oldColors);
-                frameParking.setBackground(getResources().getDrawable(R.drawable.plan_parkingu));
+                setScaleToPhoto(photoView);
+                photoView.setImageResource(R.drawable.plan_parkingu);
+
+
+        //frameParking.setBackground(getResources().getDrawable(R.drawable.plan_parkingu));
     }
     public void clickedButton2(){
                 button2.setBackgroundColor(getResources().getColor(R.color.grey));
                 button2.setTextColor(getResources().getColor(R.color.darkPink));
                 button1.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 button1.setTextColor(oldColors);
-                frameParking.setBackground(getResources().getDrawable(R.drawable.plan_parkingu2));
+                setScaleToPhoto(photoView);
+                photoView.setImageResource(R.drawable.plan_parkingu2);
+
+        //frameParking.setBackground(getResources().getDrawable(R.drawable.plan_parkingu2));
 
     }
     public void button2Action(){
@@ -86,5 +100,11 @@ public class ParkingSlideFragment extends Fragment {
                 clickedButton2();
             }
         });
+    }
+    private void setScaleToPhoto(PhotoView photoView){
+        float randomScale = ScaleHelper.createRandomScale(photoView);
+        int centerX=ScaleHelper.createXScale(getActivity());
+        int centerY =ScaleHelper.createYScale(getActivity());
+        photoView.setScale(randomScale, centerX, centerY, true);
     }
 }
