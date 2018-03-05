@@ -5,7 +5,8 @@
 
 
 ## Preview
-<img src="https://im4.ezgif.com/tmp/ezgif-4-ee96f31cad.gif"  />
+
+<img src="https://github.com/kamilmilik/guide-to-the-shopping-gallery-interface/blob/master/gallery_preview.gif"/>
 
 
 ## Authors
